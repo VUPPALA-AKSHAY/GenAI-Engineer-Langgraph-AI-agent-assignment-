@@ -1,0 +1,9 @@
+# Memory is runtime state (per-run history). Keep the folder, ignore its contents.
+# (Patterns here are relative to this folder.)
+# A checked-in sample is provided for the submission instead:
+# see docs/rejection_log_sample.md
+runs.json
+rejection_log.md
+fail_counts.json
+prompt_patches.json
+!./.gitkeep

@@ -1,0 +1,9 @@
+/* Theme tokens for the chat design. */
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-muted-foreground: var(--text-muted);
+  --color-border: var(--border-color);
+}

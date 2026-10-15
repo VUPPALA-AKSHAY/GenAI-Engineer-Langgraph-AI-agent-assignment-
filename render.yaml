@@ -1,0 +1,21 @@
+# Old Render deploy config (backend now runs on Vercel).
+services:
+  - type: web
+    name: lesson-lab-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile.backend
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: AI_GATEWAY_URL
+        value: https://ai-gateway.vercel.sh/v1/chat/completions
+      - key: AI_MODEL
+        value: deepseek/deepseek-v4-pro
+      - key: MAX_ATTEMPTS
+        value: "3"
+      - key: LLM_TIMEOUT_SECONDS
+        value: "180"
+      - key: FRONTEND_ORIGIN
+        value: https://frontend-nsilt7lkw-vuppala-akshays-projects.vercel.app
+      - key: AI_GATEWAY_KEY
+        sync: false

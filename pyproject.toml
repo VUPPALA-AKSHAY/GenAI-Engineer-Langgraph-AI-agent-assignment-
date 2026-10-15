@@ -1,0 +1,15 @@
+[project]
+name = "lesson-lab-backend"
+version = "1.0.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi==0.143.1",
+  "uvicorn[standard]==0.54.0",
+  "langgraph==1.2.15",
+  "httpx==0.28.1",
+  "pydantic==2.14.1",
+  "python-dotenv==1.2.4",
+]
+
+[tool.vercel]
+entrypoint = "backend.api.index:app"
